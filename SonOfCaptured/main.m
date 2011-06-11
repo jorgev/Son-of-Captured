@@ -16,9 +16,12 @@ int main (int argc, const char * argv[])
 	CGImageRef screenShot = CGWindowListCreateImage(rect, kCGWindowListOptionOnScreenOnly, kCGNullWindowID, kCGWindowImageDefault);
 	NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:screenShot];
 	NSData *data = [bitmapRep representationUsingType:NSPNGFileType properties: nil];
-	[data writeToFile:@"image.png" atomically:NO];
+	NSString* tempFile = NSTemporaryDirectory();
+	tempFile = [tempFile stringByAppendingString:@"image.png"];
+	[data writeToFile:tempFile atomically:NO];
 	[bitmapRep release];
 	CGImageRelease(screenShot);
+	NSLog(@"Image saved to %@", tempFile);
 	
 	[pool drain];
     return 0;
