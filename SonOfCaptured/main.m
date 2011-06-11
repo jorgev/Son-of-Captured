@@ -10,14 +10,14 @@
 #import <Cocoa/Cocoa.h>
 
 static char alNum[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+static size_t CHAR_COUNT = 62;
 
 NSString* CreateUniqueFilename(NSInteger numChars)
 {
 	char buf[32];
 	srand((unsigned int) time(NULL));
-	size_t len = strlen(alNum);
 	for (int i = 0; i < numChars; i++)
-		buf[i] = alNum[rand() % len];
+		buf[i] = alNum[rand() % CHAR_COUNT];
 	buf[numChars] = 0;
 	strcat(buf, ".png");
 	return [NSString stringWithCString:buf encoding:NSASCIIStringEncoding];
@@ -27,9 +27,17 @@ int main (int argc, const char * argv[])
 {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
-	CGRect rect = CGRectMake(300, 300, 400, 400);
+	CGRect rect = CGRectMake(0, 0, 1440, 900);
 	CGImageRef screenShot = CGWindowListCreateImage(rect, kCGWindowListOptionOnScreenOnly, kCGNullWindowID, kCGWindowImageDefault);
+	if (!screenShot)
+		return 1;
 	NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:screenShot];
+	if (!bitmapRep)
+	{
+		[bitmapRep release];
+		CGImageRelease(screenShot);
+		return 2;
+	}
 	NSData *data = [bitmapRep representationUsingType:NSPNGFileType properties:nil];
 	NSString* tempFile = NSTemporaryDirectory();
 	NSString* uniqueName = CreateUniqueFilename(5);
