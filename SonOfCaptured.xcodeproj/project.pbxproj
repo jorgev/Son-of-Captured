@@ -1,0 +1,224 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFD4E91A13A3FE6800C360DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD4E91913A3FE6800C360DF /* Foundation.framework */; };
+		CFD4E91D13A3FE6800C360DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E91C13A3FE6800C360DF /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CFD4E91313A3FE6800C360DF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CFD4E91513A3FE6800C360DF /* SonOfCaptured */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SonOfCaptured; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD4E91913A3FE6800C360DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CFD4E91C13A3FE6800C360DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CFD4E91F13A3FE6800C360DF /* SonOfCaptured-Prefix.pch */ = {isa = PBXFileReference; path = "SonOfCaptured-Prefix.pch"; sourceTree = "<group>"; };
+		CFD4E92013A3FE6800C360DF /* SonOfCaptured.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SonOfCaptured.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFD4E91213A3FE6800C360DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD4E91A13A3FE6800C360DF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFD4E90A13A3FE6800C360DF = {
+			isa = PBXGroup;
+			children = (
+				CFD4E91B13A3FE6800C360DF /* SonOfCaptured */,
+				CFD4E91813A3FE6800C360DF /* Frameworks */,
+				CFD4E91613A3FE6800C360DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFD4E91613A3FE6800C360DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4E91513A3FE6800C360DF /* SonOfCaptured */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFD4E91813A3FE6800C360DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4E91913A3FE6800C360DF /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFD4E91B13A3FE6800C360DF /* SonOfCaptured */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4E91C13A3FE6800C360DF /* main.m */,
+				CFD4E92013A3FE6800C360DF /* SonOfCaptured.1 */,
+				CFD4E91E13A3FE6800C360DF /* Supporting Files */,
+			);
+			path = SonOfCaptured;
+			sourceTree = "<group>";
+		};
+		CFD4E91E13A3FE6800C360DF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CFD4E91F13A3FE6800C360DF /* SonOfCaptured-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFD4E91413A3FE6800C360DF /* SonOfCaptured */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFD4E92313A3FE6800C360DF /* Build configuration list for PBXNativeTarget "SonOfCaptured" */;
+			buildPhases = (
+				CFD4E91113A3FE6800C360DF /* Sources */,
+				CFD4E91213A3FE6800C360DF /* Frameworks */,
+				CFD4E91313A3FE6800C360DF /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SonOfCaptured;
+			productName = SonOfCaptured;
+			productReference = CFD4E91513A3FE6800C360DF /* SonOfCaptured */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFD4E90C13A3FE6800C360DF /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = CFD4E90F13A3FE6800C360DF /* Build configuration list for PBXProject "SonOfCaptured" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CFD4E90A13A3FE6800C360DF;
+			productRefGroup = CFD4E91613A3FE6800C360DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFD4E91413A3FE6800C360DF /* SonOfCaptured */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFD4E91113A3FE6800C360DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFD4E91D13A3FE6800C360DF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CFD4E92113A3FE6800C360DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CFD4E92213A3FE6800C360DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CFD4E92413A3FE6800C360DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SonOfCaptured/SonOfCaptured-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CFD4E92513A3FE6800C360DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SonOfCaptured/SonOfCaptured-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFD4E90F13A3FE6800C360DF /* Build configuration list for PBXProject "SonOfCaptured" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFD4E92113A3FE6800C360DF /* Debug */,
+				CFD4E92213A3FE6800C360DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFD4E92313A3FE6800C360DF /* Build configuration list for PBXNativeTarget "SonOfCaptured" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFD4E92413A3FE6800C360DF /* Debug */,
+				CFD4E92513A3FE6800C360DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFD4E90C13A3FE6800C360DF /* Project object */;
+}
