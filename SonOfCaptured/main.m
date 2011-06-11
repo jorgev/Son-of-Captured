@@ -15,8 +15,9 @@ NSString* CreateUniqueFilename(NSInteger numChars)
 {
 	char buf[32];
 	srand((unsigned int) time(NULL));
+	size_t len = strlen(alNum);
 	for (int i = 0; i < numChars; i++)
-		buf[i] = alNum[rand() % strlen(alNum)];
+		buf[i] = alNum[rand() % len];
 	buf[numChars] = 0;
 	strcat(buf, ".png");
 	return [NSString stringWithCString:buf encoding:NSASCIIStringEncoding];
