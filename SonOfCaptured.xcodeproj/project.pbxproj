@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CFD4E91A13A3FE6800C360DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD4E91913A3FE6800C360DF /* Foundation.framework */; };
 		CFD4E91D13A3FE6800C360DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFD4E91C13A3FE6800C360DF /* main.m */; };
+		CFD4E92813A3FEE200C360DF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD4E92613A3FEBB00C360DF /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +25,10 @@
 
 /* Begin PBXFileReference section */
 		CFD4E91513A3FE6800C360DF /* SonOfCaptured */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SonOfCaptured; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFD4E91913A3FE6800C360DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CFD4E91C13A3FE6800C360DF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CFD4E91F13A3FE6800C360DF /* SonOfCaptured-Prefix.pch */ = {isa = PBXFileReference; path = "SonOfCaptured-Prefix.pch"; sourceTree = "<group>"; };
+		CFD4E91F13A3FE6800C360DF /* SonOfCaptured-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SonOfCaptured-Prefix.pch"; sourceTree = "<group>"; };
 		CFD4E92013A3FE6800C360DF /* SonOfCaptured.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SonOfCaptured.1; sourceTree = "<group>"; };
+		CFD4E92613A3FEBB00C360DF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFD4E91A13A3FE6800C360DF /* Foundation.framework in Frameworks */,
+				CFD4E92813A3FEE200C360DF /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 		CFD4E91813A3FE6800C360DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CFD4E91913A3FE6800C360DF /* Foundation.framework */,
+				CFD4E92613A3FEBB00C360DF /* Cocoa.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
