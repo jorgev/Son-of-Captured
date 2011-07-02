@@ -31,6 +31,7 @@ int main (int argc, const char * argv[])
 	CGImageRef screenShot = CGWindowListCreateImage(rect, kCGWindowListOptionOnScreenOnly, kCGNullWindowID, kCGWindowImageDefault);
 	if (!screenShot)
 		return 1;
+	CIImage* image = [CIImage imageWithCGImage:screenShot];
 	NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:screenShot];
 	if (!bitmapRep)
 	{
