@@ -49,7 +49,6 @@
 		CFD4E90A13A3FE6800C360DF = {
 			isa = PBXGroup;
 			children = (
-				CF5262CF13BF9C8D0024834B /* QuartzCore.framework */,
 				CFD4E91B13A3FE6800C360DF /* SonOfCaptured */,
 				CFD4E91813A3FE6800C360DF /* Frameworks */,
 				CFD4E91613A3FE6800C360DF /* Products */,
@@ -67,6 +66,7 @@
 		CFD4E91813A3FE6800C360DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF5262CF13BF9C8D0024834B /* QuartzCore.framework */,
 				CFD4E92613A3FEBB00C360DF /* Cocoa.framework */,
 			);
 			name = Frameworks;
