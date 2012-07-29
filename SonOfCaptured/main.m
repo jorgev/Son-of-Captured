@@ -27,11 +27,10 @@ int main (int argc, const char * argv[])
 {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
-	CGRect rect = CGRectMake(0, 0, 1440, 900);
+	CGRect rect = CGRectMake(0, 0, 600, 400);
 	CGImageRef screenShot = CGWindowListCreateImage(rect, kCGWindowListOptionOnScreenOnly, kCGNullWindowID, kCGWindowImageDefault);
 	if (!screenShot)
 		return 1;
-	CIImage* image = [CIImage imageWithCGImage:screenShot];
 	NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:screenShot];
 	if (!bitmapRep)
 	{
@@ -39,14 +38,15 @@ int main (int argc, const char * argv[])
 		CGImageRelease(screenShot);
 		return 2;
 	}
-	NSData *data = [bitmapRep representationUsingType:NSPNGFileType properties:nil];
-	NSString* tempFile = NSTemporaryDirectory();
-	NSString* uniqueName = CreateUniqueFilename(5);
-	tempFile = [tempFile stringByAppendingString:uniqueName];
-	[data writeToFile:tempFile atomically:NO];
+	NSData* data = [bitmapRep representationUsingType:NSPNGFileType properties:nil];
 	[bitmapRep release];
 	CGImageRelease(screenShot);
-	NSLog(@"Image saved to %@", tempFile);
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
+    NSString* savedImage =[paths objectAtIndex:0];
+	NSString* uniqueName = CreateUniqueFilename(5);
+	savedImage = [savedImage stringByAppendingFormat:@"/%@", uniqueName];
+	[data writeToFile:savedImage atomically:NO];
+	NSLog(@"Image saved to %@", savedImage);
 	
 	[pool drain];
     return 0;
