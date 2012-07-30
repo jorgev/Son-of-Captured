@@ -27,10 +27,13 @@ int main (int argc, const char * argv[])
 {
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	
-	CGRect rect = CGRectMake(0, 0, 600, 400);
+    // capture a screenshot using the selected area
+	CGRect rect = CGRectMake(0, 0, 2880, 1800);
 	CGImageRef screenShot = CGWindowListCreateImage(rect, kCGWindowListOptionOnScreenOnly, kCGNullWindowID, kCGWindowImageDefault);
 	if (!screenShot)
 		return 1;
+    
+    // convert it to a bitmap image so we can manipulate it
 	NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:screenShot];
 	if (!bitmapRep)
 	{
@@ -38,15 +41,22 @@ int main (int argc, const char * argv[])
 		CGImageRelease(screenShot);
 		return 2;
 	}
+    
+    // get the actual bytes so we can write it to a file, using png format
 	NSData* data = [bitmapRep representationUsingType:NSPNGFileType properties:nil];
+    
+    // clean up
 	[bitmapRep release];
 	CGImageRelease(screenShot);
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
-    NSString* savedImage =[paths objectAtIndex:0];
+    
+    // create a path for the file
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    NSURL* url = [fileManager URLForDirectory:NSDesktopDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil];
 	NSString* uniqueName = CreateUniqueFilename(5);
-	savedImage = [savedImage stringByAppendingFormat:@"/%@", uniqueName];
-	[data writeToFile:savedImage atomically:NO];
-	NSLog(@"Image saved to %@", savedImage);
+	url = [url URLByAppendingPathComponent:uniqueName];
+    
+    // write the file
+	[data writeToURL:url atomically:NO];
 	
 	[pool drain];
     return 0;
